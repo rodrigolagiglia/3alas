@@ -1,0 +1,109 @@
+/* estilos.css */
+
+/* Declaro Variables */
+:root{
+	--negroVerdadero: #000;
+	--negro: #29272a;
+	--naranja: #f69c21;
+	--naranjabotonera: #fe6903;
+	--blanco: #FFF;
+	--naranjaclaro: #ff9500;
+}
+*{
+	/*Elimino caracteristicas que vienen por defecto*/
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	
+}
+body{
+	background-color: var(--negro);
+	background-image: url("images/pattern.jpg");
+	/*Aplico la fuente general en la etiqueta body para aprovechar la herencia, ya que la mayoria de la fuente es la misma*/
+	font-family: arial, sans-serif; /* doy dos opciones para el caso que el sistema operativo sea linux u otro */
+	
+}
+
+.cabecera{
+	/*background-color: red; este color lo uso para ir viendo como queda*/
+	
+	display: flex;
+	/*Los separa en horizontal*/
+	justify-content: space-between;
+	
+	/*Los centra en vertical */
+	align-items: center;
+	
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 16px;
+	margin-bottom: 24px;	
+}
+
+h1{
+	color: var(--naranja);
+}
+
+.contenedor{
+	background-color: var(--blanco);
+	max-width: 1000px;
+	/*Para centrar*/
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*----------------------------
+
+SECCION BOTONERA
+
+------------------------------*/
+.botonera{
+	background-color: var(--naranjabotonera);
+	/*max-height: 57px;*/
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 15px;
+	padding-right: 10px;
+}
+.botonera-lista{
+	display: flex;
+	justify-content: space-between;
+	list-style:none;	
+	/*con float
+	overflow: auto;*/
+	
+	
+}
+.botonera li{
+	flex-grow:1;
+	
+}
+.botonera a{
+	
+	/*con float
+	float: left;*/
+	/* background-color:green; */
+	display:block;
+	
+	padding: 2px 0;
+	
+	text-decoration: none;
+	border-right: 1px solid var(--naranjaclaro);
+	text-align: center;
+	
+}
+.sinborde.sinborde{/*le agrego especificidad al repetir la clase*/
+	border-right: none;
+}
+
+/*otra opcion para sacar el ultimo borde esta es una mejor opcion que la anterior
+a.sinborde{
+	border-right: none;
+}
+*/
+.botonera a:hover{
+	color: var(--negroVerdadero);
+	
+}
+
