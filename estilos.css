@@ -8,6 +8,7 @@
 	--naranjabotonera: #fe6903;
 	--blanco: #FFF;
 	--naranjaclaro: #ff9500;
+	--grisClaro: #bbbbbb;
 }
 *{
 	/*Elimino caracteristicas que vienen por defecto*/
@@ -23,7 +24,11 @@ body{
 	font-family: arial, sans-serif; /* doy dos opciones para el caso que el sistema operativo sea linux u otro */
 	
 }
-
+h2{
+	font-size: 20px;
+	margin-bottom: 16px;
+	
+}
 .cabecera{
 	/*background-color: red; este color lo uso para ir viendo como queda*/
 	
@@ -46,6 +51,7 @@ h1{
 }
 
 .contenedor{
+	border-radius: 10px 10px 0 0; /*borde redondeado, orden equina sup izq, sup der , inf der , inf izq*/
 	background-color: var(--blanco);
 	max-width: 1000px;
 	/*Para centrar*/
@@ -59,6 +65,7 @@ SECCION BOTONERA
 
 ------------------------------*/
 .botonera{
+	border-radius: 10px 10px 0 0;
 	background-color: var(--naranjabotonera);
 	/*max-height: 57px;*/
 	padding-top: 8px;
@@ -85,7 +92,7 @@ SECCION BOTONERA
 	float: left;*/
 	/* background-color:green; */
 	display:block;
-	
+	color: var(--blanco);
 	padding: 2px 0;
 	
 	text-decoration: none;
@@ -106,4 +113,140 @@ a.sinborde{
 	color: var(--negroVerdadero);
 	
 }
+/*----------------------------
 
+SECCION SLIDER
+
+------------------------------*/
+
+.slider{
+	text-align: center;
+	margin-top: 30px; /*pongo solo el margen de arriba y el margen de abajo al elemento siguiente para que ese elemento no quede pegado en caso de que saque el slider*/
+}
+
+
+
+
+/*----------------------------
+
+SECCION CATEGORIAS
+
+------------------------------*/
+.categorias{
+	/*background-color: red;*/
+	float: left;
+	margin-top: 50px;
+	width: 20%;
+	
+}
+
+.categorias h2{
+	padding-left: 24px;
+}
+.categorias li{
+	
+	list-style-type: none;
+	margin-left:10px;	
+	border-bottom: 1px dashed var(--grisClaro);
+	padding-left: 35px;
+}
+.categorias a{
+	
+	color: var(--negro);
+	text-decoration: none;
+	
+	padding: 10px 0;
+	
+	display:block;
+}
+
+.categorias a:hover{
+	color: var(--negroVerdadero);
+	font-weight: bold;
+	
+}
+
+/*----------------------------
+
+SECCION PRODUCTOS
+
+------------------------------*/
+
+.productos{
+	/* background-color: skyblue;  */
+	width:80%; 
+	float: right;
+	margin-top: 50px;
+	padding-right: 26px;
+}
+
+.lampara{
+	width: 50%;
+	/* background-color:red; */
+	float:left;
+	padding-bottom: 32px;
+	padding-left: 26px;
+	
+}
+
+.lampara img{
+	/* background-color:pink; */
+	 width:50%; 
+	float: left;
+	padding-right: 30px;
+	
+}
+.lampara p{
+	width:50%;
+	/* background-color: blue; */
+	float:right;
+	padding-top: 10px;
+}
+
+/*----------------------------
+
+SECCION NEWSLETTER
+
+------------------------------*/
+.newsletter{
+	border-radius: 5px;
+	clear: both;
+	max-width: 940px;
+	margin-left: auto;
+	margin-right: auto;
+	/* height: 60px; */
+	border: 1px solid var(--grisClaro);
+	padding: 10px 24px;
+	overflow:auto; /*en lugar de darle un alto*/ 
+	background-image: linear-gradient(var(--blanco), var(--grisClaro)); /*degradado css*/
+	
+}
+
+.newsletter img{
+	
+	float: left;
+}
+
+
+.newsletter-info {
+	float:left;
+	padding-left: 40px;
+}
+
+.newsletter-info p{
+	padding-left: 35px;
+}
+.newsletter-form{
+	margin-top: 12px;/*centro el formulario*/
+	float: right;
+}
+
+.newsletter-form [type="submit"]{/*seleccino el boton del formulario de otra manera en lugar de crear una clase*/
+	/* background-color:red; */
+	background: none; 
+	border: none;
+	
+	cursor: pointer; /*agregamos el cursor manito que lo perdimos al hacer background:none;*/
+	font-weight: bold;
+	padding: 5px 8px;
+}
