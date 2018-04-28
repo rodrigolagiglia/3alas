@@ -305,3 +305,20 @@ SECCION PIE
 	font-family: 'Permanent Marker', cursive;
 
 }
+
+/*
+				-*-*-*-*-*--*-*-*-*--*-*-**--*-*
+
+				PAGINA EMPRESA
+
+				-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+				
+.pagina-empresa .productos{
+	background-color: green;
+	padding-left: 20px;
+	/*Despues lo vamos a mejorar con Sass*/
+}
+
+.pagina-empresa .categorias{
+	margin-bottom: 40px;
+}
