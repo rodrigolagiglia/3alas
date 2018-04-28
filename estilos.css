@@ -9,6 +9,8 @@
 	--blanco: #FFF;
 	--naranjaclaro: #ff9500;
 	--grisClaro: #bbbbbb;
+	--gris: #f0f0f0;
+	--negroClaro: #323232;
 }
 *{
 	/*Elimino caracteristicas que vienen por defecto*/
@@ -112,6 +114,16 @@ a.sinborde{
 .botonera a:hover{
 	color: var(--negroVerdadero);
 	
+}
+
+.botonera-lista_formulario{
+	margin-left: 50px; 
+
+}
+
+.botonera-lista_formulario input{
+	/*Le agrego padding a los elementos del formulario para que se les agregue relleno y se agranden un poco, ya que con el selector *  habian perdido sus caracteristicas por defecto*/
+	padding: 2px 4px;
 }
 /*----------------------------
 
@@ -249,4 +261,47 @@ SECCION NEWSLETTER
 	cursor: pointer; /*agregamos el cursor manito que lo perdimos al hacer background:none;*/
 	font-weight: bold;
 	padding: 5px 8px;
+}
+/*----------------------------
+
+SECCION PIE
+
+------------------------------*/
+
+
+.pie{
+	/*Propiedades heredables , las aplico en el padre*/
+	background-color: var(--gris);
+	margin-top: 30px;
+	padding: 6px 50px;
+	border-top: 1px solid var(--negroVerdadero);
+	color: var(--negroClaro);
+	font-size: 14px;
+}
+.pie-copy h4{
+	font-weight: normal;
+}
+.pie-copy{
+	float: left;
+	padding-right: 20px;
+}
+
+.pie-china{
+	float: left;
+	padding-right: 15px;
+}
+.pie-arg{
+	float: left;
+	border-left: 1px solid var(--negro);
+	padding-left: 15px;
+}
+
+.pie-creditos{
+	text-align: right;
+	clear:both;
+}
+.pie-creditos a{
+	/*Aplicamos la fuente de Google que definimos en el html */
+	font-family: 'Permanent Marker', cursive;
+
 }
